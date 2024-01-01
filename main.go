@@ -39,7 +39,7 @@ func handleIncomingRequest(conn net.Conn){
 func main(){
 	port := 8900
 	
-	listener, err := net.Listen("tcp", fmt.Sprintf(":%d"))
+	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
 	if err != nil{
 		fmt.Println("Error starting server:", err)
 		return
